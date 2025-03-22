@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Tektur:wght@400..900&display=swap');
+
+
+body {
+    background-color: #353535;
+
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    background: none;
+    border: none;
+    outline: none;
+    color: #58b44c;
+    font-size: 80px;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    width: 65px;
+    font-weight: bold;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+section{
+    width: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+button  {
+    border: solid 2px #ffffff;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .25s;
+}
+
+button:hover{
+    background-color: #ffffff;
+    cursor: pointer;
+    transform: scale(1.5);
+    z-index: 1;
+    transition: .25s;
+}
+
+span {
+    background: none;
+    border: none;
+    outline: none;
+    color: #58b44c;
+    font-size: 100px;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+}
+
+#play {
+    color: #2c5cf8;
+}
+
+#stop {
+    color: #f83a3a;
+}
+
+#full-screen {
+    color: #32e4fc;
+    font-size: 17px;
+}
+
+#reset {
+    color: #a055f5;
+}
+
+h1 {
+    color: #fff;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+p {
+    background-color: #464646;
+    height: 50px;
+    width: 300px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    color: #fff;
+    font-family:  "Tektur", sans-serif;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+    <title>Contador</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" value="01" maxlength='2' id="hour" />
+        <span>:</span>
+        <input type="text" value="01" maxlength=2 id="min" />
+        <span>:</span>
+        <input type="text" value="01" maxlength=2 id="sec" />
+    </div>
+    <section>
+        <button onclick="playCounter()">
+            <i id="play" class="material-symbols-outlined">
+                play_arrow
+            </i>
+        </button>
+        <button onclick="stopCounter()">
+            <i id="stop" class="material-symbols-outlined">
+                stop
+            </i>
+        </button>
+        <button onclick="fullScreen()">
+            <i id="full-screen" class="material-symbols-outlined">
+                fullscreen
+            </i>
+        </button>
+        <button onclick="resetCounter()">
+            <i id="reset" class="material-symbols-outlined">
+                restart_alt
+            </i>
+        </button>
+    </section>
+
+</body>
+<script src="index.js"></script>
+
+</html>
