@@ -32,11 +32,18 @@ body {
         height: 90px;
 
         margin-bottom: 22px;
+
+        filter: invert(1);
+    }
+
+    @media screen and (max-width: 670px) {
+        width: 300px;
+        height: 600px;
     }
 }
 
 
-.box-login {
+.box {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -51,6 +58,9 @@ body {
     border-top-left-radius: 50px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
+
+    transition: .5s;
+
 
     label {
         position: relative;
@@ -107,5 +117,9 @@ input {
         text-decoration: none;
         color: #000;
         font-weight: bold;
+
+        &:hover{
+            cursor: pointer;
+        }
     }
 }
