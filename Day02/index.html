@@ -1,34 +1,84 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <div class="container" id="container">
-        <img src="./assets/icon.png" alt="" class="img">
-        <div class="box active" id="login">
-            <h1>Login</h1>
-            <input id="email" type="text" placeholder="Email">
-            <input id="password" type="password" placeholder="Password">
-            <input class="button" type="button" value="Login">
-            <div class="box-signup">Don't have any account? <a onClick="changeMode()">Sign Up</a></div>
+<body class="w-screen h-screen bg-[#33375A] flex flex-col items-center justify-center">
+    <div class="bg-[#202342] w-1/2 md:w-[400px] h-[600px] p-10 rounded-2xl flex flex-col justify-between hidden" id="signin">
+        <h1 class="text-white text-2xl font-bold">Sign In</h1>
+        <div class="w-full gap-5 flex flex-col items-center">
+            <input type="text" id="username" placeholder="email@example.com" class="p-2 outline-none border-none bg-[#2F335D] rounded-2xl w-[300px] h-[40px] text-white">
+            <input type="password" id="pass" placeholder="***********" class="p-2 outline-none border-none bg-[#2F335D] rounded-2xl w-[300px] h-[40px] text-white">
+        </div>
+        <div class="flex justify-between items-center">
+            <div class="flex items-center gap-1">
+                <input type="checkbox" id="check-input">
+                <label for="check-input" class="text-sm font-semibold text-[#52566D]">Remember me</label>
+            </div>
+
+            <a href="#" class="text-sm font-semibold text-[#52566D] hover:text-[#42CC7E]">
+                Forgot password?
+            </a>
+        </div>
+        <button class="w-[17em] h-[40px] rounded-2xl bg-[#42CC7E] text-black font-semibold self-center">
+            Sign In
+        </button>
+        <div class="w-full flex items-center gap-1 text-[#52566D]">
+            <span class="w-full h-[1px] bg-[#52566D]"></span>
+                or
+            <span class="w-full h-[1px] bg-[#52566D]"></span>
+        </div>
+        <div class="w-full flex items-center justify-around">
+            <button class="bg-white w-4 h-4 p-4 rounded-full flex items-center justify-center">
+                <i class="fab fa-google hover:text-red-500"></i>
+            </button>
+            <button class="bg-white w-4 h-4 p-4 rounded-full flex items-center justify-center">
+                <i class="fab fa-facebook hover:text-blue-600"></i>
+            </button>
+            <button class="bg-white w-4 h-4 p-4 rounded-full flex items-center justify-center">
+                <i class="fab fa-github hover:text-black"></i>
+            </button>
         </div>
 
-        <div class="box" id="signup" style="display: none;">
-            <h1>Sign up</h1>
-            <input id="email" type="text" placeholder="Name">
-            <input id="email" type="text" placeholder="Email">
-            <input id="password" type="password" placeholder="Password">
-            <input id="password" type="password" placeholder="Password Confirmation">
-            <input class="button" type="button" value="Login">
-            <div class="box-signup">You have any account? <a onClick="changeMode()">Login</a></div>
-        </div>
+
+        <footer class="w-full flex items-center justify-center">
+
+        <p class="text-[#52566D] text-sm">Don't have an account? <a onclick="toggleForm()" class="cursor-pointer text-[#42CC7E] font-semibold">Create new one</a></p>
+    </footer>
     </div>
-</body>
-<script src="index.js"> </script>
 
+    <div class="bg-[#202342] w-1/2 md:w-[400px] h-[600px] p-10 rounded-2xl flex flex-col justify-between" id="signup">
+        <h1 class="text-white text-2xl font-bold">Sign Up</h1>
+        <div class="w-full gap-5 flex flex-col items-center">
+            <input type="text" id="username" placeholder="@user_name" class="p-2 outline-none border-none bg-[#2F335D] rounded-2xl w-[300px] h-[40px] text-white">
+            <input type="text" id="username" placeholder="email@example.com" class="p-2 outline-none border-none bg-[#2F335D] rounded-2xl w-[300px] h-[40px] text-white">
+            <input type="text" id="pass" placeholder="************" class="p-2 outline-none border-none bg-[#2F335D] rounded-2xl w-[300px] h-[40px] text-white">
+            <input type="password" id="pass-confirm" placeholder="***********" class="p-2 outline-none border-none bg-[#2F335D] rounded-2xl w-[300px] h-[40px] text-white">
+        </div>
+        <div class="flex items-start gap-1">
+            <input type="checkbox" id="check-input" class="mt-1 checked:bg-[#42CC7E]">
+            <label for="check-input" class="text-sm font-semibold text-[#52566D] leading-tight">
+                By singing up you accept the
+                <a href="" class="text-[#42CC7E]">Terms of service</a>
+                and
+                <a href="" class="text-[#42CC7E]">Privacy Policy</a>
+            </label>
+        </div>
+        <button class="w-[17em] h-[40px] rounded-2xl bg-[#42CC7E] text-black font-semibold self-center">
+            Sign up
+        </button>
+        <footer class="w-full flex items-center justify-center">
+        <p class="text-[#52566D] text-sm">Already have any account? <a onclick="toggleForm()" class="cursor-pointer text-[#42CC7E] font-semibold">Sign in</a></p>
+    </footer>
+ 
+    </div>
+<script src="index.js"></script>
+</body>
 </html>

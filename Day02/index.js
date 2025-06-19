@@ -1,9 +1,12 @@
-function changeMode() {
-    const loginBox = document.getElementById('login');
-    const signupBox = document.getElementById('signup');
-    
-    // Troca entre as classes para "virar" os formulários
-    loginBox.style.display = loginBox.style.display === 'none' ? 'flex' : 'none';
-    signupBox.style.display = signupBox.style.display === 'none' ? 'flex' : 'none';
+const signin = document.getElementById("signin")
+const signup = document.getElementById("signup")
 
+function toggleForm(){
+    if(signin.classList.contains('hidden')){
+        signin.classList.remove('hidden')
+        signup.classList.add('hidden')
+    } else {
+        signup.classList.remove('hidden')
+        signin.classList.add('hidden')
+    }
 }
