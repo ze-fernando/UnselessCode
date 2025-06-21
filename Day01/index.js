@@ -29,7 +29,6 @@ inputs.forEach(input => {
     });
 });
 
-
 function playCounter() {
     if (playing) {
         play.innerHTML = "play_arrow";

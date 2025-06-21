@@ -11,13 +11,16 @@
 </head>
 
 <body class="w-screen h-screen bg-[#33375A] flex flex-col items-center justify-center">
-    <div class="bg-[#202342] w-1/2 md:w-[400px] h-[600px] p-10 rounded-2xl flex flex-col justify-between hidden" id="signin">
+    <div class="bg-[#202342] w-full md:w-[400px] h-[600px] p-10 rounded-2xl flex flex-col justify-between hidden"
+        id="signin">
         <h1 class="text-white text-2xl font-bold">Sign In</h1>
         <div class="w-full gap-5 flex flex-col items-center">
-            <input type="text" id="username" placeholder="email@example.com" class="p-2 outline-none border-none bg-[#2F335D] rounded-2xl w-[300px] h-[40px] text-white">
-            <input type="password" id="pass" placeholder="***********" class="p-2 outline-none border-none bg-[#2F335D] rounded-2xl w-[300px] h-[40px] text-white">
+            <input type="text" id="username" placeholder="email@example.com"
+                class="p-2 outline-none border-none bg-[#2F335D] rounded-2xl w-[200px] md:w-[300px] h-[40px] text-white">
+            <input type="password" id="pass" placeholder="***********"
+                class="p-2 outline-none border-none bg-[#2F335D] rounded-2xl w-[200px] md:w-[300px] h-[40px] text-white">
         </div>
-        <div class="flex justify-between items-center">
+        <div class="w-full flex justify-between items-center">
             <div class="flex items-center gap-1">
                 <input type="checkbox" id="check-input">
                 <label for="check-input" class="text-sm font-semibold text-[#52566D]">Remember me</label>
@@ -27,12 +30,12 @@
                 Forgot password?
             </a>
         </div>
-        <button class="w-[17em] h-[40px] rounded-2xl bg-[#42CC7E] text-black font-semibold self-center">
+        <button class="w-[10em] md:w-[17em] h-[40px] rounded-2xl bg-[#42CC7E] text-black font-semibold self-center">
             Sign In
         </button>
         <div class="w-full flex items-center gap-1 text-[#52566D]">
             <span class="w-full h-[1px] bg-[#52566D]"></span>
-                or
+            or
             <span class="w-full h-[1px] bg-[#52566D]"></span>
         </div>
         <div class="w-full flex items-center justify-around">
@@ -50,17 +53,22 @@
 
         <footer class="w-full flex items-center justify-center">
 
-        <p class="text-[#52566D] text-sm">Don't have an account? <a onclick="toggleForm()" class="cursor-pointer text-[#42CC7E] font-semibold">Create new one</a></p>
-    </footer>
+            <p class="text-[#52566D] text-sm">Don't have an account? <a onclick="toggleForm()"
+                    class="cursor-pointer text-[#42CC7E] font-semibold">Create new one</a></p>
+        </footer>
     </div>
 
-    <div class="bg-[#202342] w-1/2 md:w-[400px] h-[600px] p-10 rounded-2xl flex flex-col justify-between" id="signup">
+    <div class="bg-[#202342] w-full md:w-[400px] h-[600px] p-10 rounded-2xl flex flex-col justify-between" id="signup">
         <h1 class="text-white text-2xl font-bold">Sign Up</h1>
         <div class="w-full gap-5 flex flex-col items-center">
-            <input type="text" id="username" placeholder="@user_name" class="p-2 outline-none border-none bg-[#2F335D] rounded-2xl w-[300px] h-[40px] text-white">
-            <input type="text" id="username" placeholder="email@example.com" class="p-2 outline-none border-none bg-[#2F335D] rounded-2xl w-[300px] h-[40px] text-white">
-            <input type="text" id="pass" placeholder="************" class="p-2 outline-none border-none bg-[#2F335D] rounded-2xl w-[300px] h-[40px] text-white">
-            <input type="password" id="pass-confirm" placeholder="***********" class="p-2 outline-none border-none bg-[#2F335D] rounded-2xl w-[300px] h-[40px] text-white">
+            <input type="text" id="username" placeholder="@user_name"
+                class="p-2 outline-none border-none bg-[#2F335D] rounded-2xl w-[200px] md:w-[300px] h-[40px] text-white">
+            <input type="text" id="username" placeholder="email@example.com"
+                class="p-2 outline-none border-none bg-[#2F335D] rounded-2xl w-[200px] md:w-[300px] h-[40px] text-white">
+            <input type="text" id="pass" placeholder="************"
+                class="p-2 outline-none border-none bg-[#2F335D] rounded-2xl w-[200px] md:w-[300px] h-[40px] text-white">
+            <input type="password" id="pass-confirm" placeholder="***********"
+                class="p-2 outline-none border-none bg-[#2F335D] rounded-2xl w-[200px] md:w-[300px] h-[40px] text-white">
         </div>
         <div class="flex items-start gap-1">
             <input type="checkbox" id="check-input" class="mt-1 checked:bg-[#42CC7E]">
@@ -71,14 +79,16 @@
                 <a href="" class="text-[#42CC7E]">Privacy Policy</a>
             </label>
         </div>
-        <button class="w-[17em] h-[40px] rounded-2xl bg-[#42CC7E] text-black font-semibold self-center">
+        <button class="w-[10em] md:w-[17em] h-[40px] rounded-2xl bg-[#42CC7E] text-black font-semibold self-center">
             Sign up
         </button>
         <footer class="w-full flex items-center justify-center">
-        <p class="text-[#52566D] text-sm">Already have any account? <a onclick="toggleForm()" class="cursor-pointer text-[#42CC7E] font-semibold">Sign in</a></p>
-    </footer>
- 
+            <p class="text-[#52566D] text-sm">Already have any account? <a onclick="toggleForm()"
+                    class="cursor-pointer text-[#42CC7E] font-semibold">Sign in</a></p>
+        </footer>
+
     </div>
-<script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>
